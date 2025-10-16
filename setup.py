@@ -23,7 +23,7 @@ setuptools.setup(
     ],
     python_requires='>=3.0',
     install_requires=[
-          'numpy',
+          'numpy == 1.26.4',
           'scikit-learn',
           'torch',
           'torchvision',
@@ -32,10 +32,10 @@ setuptools.setup(
           'tensorboard',
           'matplotlib',
           'pretrainedmodels',
-          'pytorch-metric-learning == 0.9.92',
+          'pytorch-metric-learning == 1.0.0',
           'pandas',
           'ax-platform',
-          'faiss-gpu',
+          'faiss-gpu == 1.7.2',
           'gdown >= 3.12.0',
     ],
 )

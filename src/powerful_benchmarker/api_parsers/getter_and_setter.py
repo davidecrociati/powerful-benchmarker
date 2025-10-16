@@ -106,7 +106,6 @@ class GetterAndSetter:
                 "global_db_path": lambda: self.global_db_path, 
                 "experiment_name": lambda: self.args.experiment_name, 
                 "is_new_experiment": lambda: self.beginning_of_training() and self.curr_split_count == 0, 
-                "save_figures": lambda: self.args.save_figures_on_tensorboard,
                 "save_lists": lambda: self.args.save_lists_in_db}
 
     def default_kwargs_meta_record_keeper(self):
@@ -117,7 +116,6 @@ class GetterAndSetter:
                 "global_db_path": lambda: self.global_db_path, 
                 "experiment_name": lambda: self.args.experiment_name, 
                 "is_new_experiment": lambda: self.beginning_of_training(),
-                "save_figures": lambda: self.args.save_figures_on_tensorboard,
                 "save_lists": lambda: self.args.save_lists_in_db}
     
     def default_kwargs_hooks(self):
