@@ -186,6 +186,19 @@ class GetterAndSetter:
     def get_dummy_hook_and_tester(self):
         hooks = self.get_hooks(record_keeper=lambda: None)
         tester = self.get_tester(**self.nullify_kwargs(self.default_kwargs_tester()))
+        # Provide a minimal reference_split_names so HookContainer.record_group_name works
+        try:
+            # Prefer actual split names from the split manager if available
+            split_names = self.split_manager.split_scheme_holder.get_split_names()
+        except Exception:
+            split_names = ["train", "val", "test"]
+        # Ensure attribute exists and has entries for the splits
+        ref = getattr(tester, "reference_split_names", None)
+        if not isinstance(ref, dict):
+            ref = {}
+        for s in split_names:
+            ref.setdefault(s, [s])
+        tester.reference_split_names = ref
         return hooks, tester
 
     def set_dataparallel(self, models):

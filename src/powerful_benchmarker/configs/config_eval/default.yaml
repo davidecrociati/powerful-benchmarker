@@ -1,6 +1,5 @@
 tester:
   GlobalEmbeddingSpaceTester:
-    reference_set: compared_to_self
     normalize_embeddings: True
     use_trunk_output: False
     batch_size: 32
