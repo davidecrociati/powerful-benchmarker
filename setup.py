@@ -32,7 +32,7 @@ setuptools.setup(
           'tensorboard == 2.3.0',
           'matplotlib == 3.3.2',
           'pretrainedmodels ',
-          'pytorch-metric-learning == 1.0.0',
+          'pytorch-metric-learning == 0.9.92',
           'pandas == 1.1.2',
           'ax-platform == 0.1.14',
           'faiss-gpu == 1.6.4',
