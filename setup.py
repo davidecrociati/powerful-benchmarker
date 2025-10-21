@@ -34,7 +34,7 @@ setuptools.setup(
           'pretrainedmodels ',
           'pytorch-metric-learning == 0.9.92',
           'pandas',
-          'ax-platform',
+          'ax-platform == 0.1.14',
           'faiss-gpu',
           'gdown >= 3.12.0',
     ],
