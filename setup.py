@@ -36,6 +36,6 @@ setuptools.setup(
           'pandas == 1.1.2',
           'ax-platform == 0.1.14',
           'faiss-gpu == 1.6.4',
-          'gdown == 3.12.2',
+          'gdown >= 3.12.0',
     ],
 )
