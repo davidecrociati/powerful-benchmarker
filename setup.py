@@ -37,5 +37,6 @@ setuptools.setup(
           'ax-platform == 0.1.14',
           'faiss-gpu',
           'gdown >= 3.12.0',
+          'kagglehub'
     ],
 )

@@ -52,7 +52,7 @@ class Oxford102(Dataset):
             raise RuntimeError('Could not find extracted Oxford102 files in {}'.format(self.root))
 
         split_dirs = []
-        for name in ['train', 'val', 'test']:
+        for name in ['train', 'valid', 'test']:
             p = os.path.join(dataset_folder, name)
             if os.path.isdir(p):
                 split_dirs.append(p)
