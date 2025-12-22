@@ -84,10 +84,7 @@ class Oxford102(Dataset):
                         img_paths.append(img)
                         labels.append(idx)
 
-        # If the archive already flattened images under a single folder with
-        # class subfolders (i.e., not nested under train/val/test), handle that too
         if len(img_paths) == 0:
-            # look for class folders directly under dataset_folder
             for class_dir in os.listdir(dataset_folder):
                 class_path = os.path.join(dataset_folder, class_dir)
                 if os.path.isdir(class_path):
@@ -120,15 +117,11 @@ class Oxford102(Dataset):
         except Exception as e:
             raise RuntimeError('kagglehub is required to download Oxford102 via this class. Install it and try again.') from e
 
-        # kagglehub.dataset_download typically returns a path to the downloaded
-        # archive or extracted folder. We handle both cases.
         archive_or_folder = kagglehub.dataset_download("yousefmohamed20/oxford-102-flower-dataset")
 
-        # If kagglehub returned None, assume it downloaded into current working dir
         if archive_or_folder is None:
             archive_or_folder = os.getcwd()
 
-        # If a file, extract it. If a folder, copy its contents into self.root
         if os.path.isfile(archive_or_folder):
             if archive_or_folder.endswith('.zip'):
                 with zipfile.ZipFile(archive_or_folder, 'r') as z:
@@ -137,7 +130,6 @@ class Oxford102(Dataset):
                 with tarfile.open(archive_or_folder, 'r:*') as tar:
                     tar.extractall(path=self.root, members=c_f.extract_progress(tar))
         elif os.path.isdir(archive_or_folder):
-            # copy contents into self.root
             for entry in os.listdir(archive_or_folder):
                 src = os.path.join(archive_or_folder, entry)
                 dst = os.path.join(self.root, entry)
