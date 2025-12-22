@@ -1,0 +1,15 @@
+experiment,path
+ ArcFace,test\test_ArcFace
+ Contrastive,test\test_Contrastive
+ CosFace,test\test_CosFace
+ FastAP,test\test_FastAP
+ Margin,test\test_Margin
+ Margin per Class,test\test_Margin per Class
+ MultiSimilarity,test\test_MultiSimilarity
+ MultiSimilarity Miner,test\test_MultiSimilarity Miner
+ Normalized Softmax,test\test_Normalized Softmax
+ NTXent,test\test_NTXent
+ ProxyNCA,test\test_ProxyNCA
+ SNR Contrastive,test\test_SNR Contrastive
+ SoftTriple,test\test_SoftTriple
+ Triplet,test\test_Triplet
