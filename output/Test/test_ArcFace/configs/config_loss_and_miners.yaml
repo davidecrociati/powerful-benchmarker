@@ -1,0 +1,10 @@
+loss_funcs:
+  metric_loss:
+    ArcFaceLoss:
+      margin: 0.73537
+      embedding_size: 128
+      scale: 102.62212
+sampler:
+  MPerClassSampler:
+    m: 1
+mining_funcs: {}

@@ -1,0 +1,12 @@
+loss_funcs:
+  metric_loss:
+    MarginLoss:
+      margin: 0.04339
+      nu: 0
+      beta: 0.83934
+      learn_beta: true
+      num_classes: null
+sampler:
+  MPerClassSampler:
+    m: 4
+mining_funcs: {}

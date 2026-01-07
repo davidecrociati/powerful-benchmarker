@@ -1,0 +1,9 @@
+loss_funcs:
+  metric_loss:
+    NormalizedSoftmaxLoss:
+      embedding_size: 128
+      temperature: 0.05385
+sampler:
+  MPerClassSampler:
+    m: 1
+mining_funcs: {}

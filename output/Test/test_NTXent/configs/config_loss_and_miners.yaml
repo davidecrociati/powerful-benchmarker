@@ -1,0 +1,8 @@
+loss_funcs:
+  metric_loss:
+    NTXentLoss:
+      temperature: 0.0437356
+sampler:
+  MPerClassSampler:
+    m: 4
+mining_funcs: {}

@@ -1,0 +1,9 @@
+loss_funcs:
+  metric_loss:
+    ProxyNCALoss:
+      embedding_size: 128
+      softmax_scale: 6.72345
+sampler:
+  MPerClassSampler:
+    m: 1
+mining_funcs: {}

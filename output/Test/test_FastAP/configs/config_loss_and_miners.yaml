@@ -1,0 +1,8 @@
+loss_funcs:
+  metric_loss:
+    FastAPLoss:
+      num_bins: 80
+sampler:
+  MPerClassSampler:
+    m: 4
+mining_funcs: {}

@@ -1,0 +1,8 @@
+loss_funcs:
+  metric_loss:
+    TripletMarginLoss:
+      margin: 0.041128
+sampler:
+  MPerClassSampler:
+    m: 4
+mining_funcs: {}

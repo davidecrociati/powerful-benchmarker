@@ -1,0 +1,10 @@
+loss_funcs:
+  metric_loss:
+    CosFaceLoss:
+      margin: 0.2783
+      embedding_size: 128
+      scale: 122.84063
+sampler:
+  MPerClassSampler:
+    m: 1
+mining_funcs: {}

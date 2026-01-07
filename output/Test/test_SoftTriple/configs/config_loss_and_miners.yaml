@@ -1,0 +1,12 @@
+loss_funcs:
+  metric_loss:
+    SoftTripleLoss:
+      embedding_size: 128
+      la: 26.2658
+      gamma: 43.7774
+      margin: 0.83546
+      weight_reg_weight: 0.14685
+sampler:
+  MPerClassSampler:
+    m: 4
+mining_funcs: {}

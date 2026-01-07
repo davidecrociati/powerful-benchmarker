@@ -1,0 +1,13 @@
+loss_funcs:
+  metric_loss:
+    MultiSimilarityLoss:
+      alpha: 49.18794
+      beta: 100
+      base: 0.76465
+sampler:
+  MPerClassSampler:
+    m: 4
+mining_funcs:
+  tuple_miner:
+    MultiSimilarityMiner:
+      epsilon: 1

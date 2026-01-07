@@ -1,0 +1,9 @@
+loss_funcs:
+  metric_loss:
+    SignalToNoiseRatioContrastiveLoss:
+      pos_margin: 1.09709
+      neg_margin: 1.53582
+sampler:
+  MPerClassSampler:
+    m: 4
+mining_funcs: {}
